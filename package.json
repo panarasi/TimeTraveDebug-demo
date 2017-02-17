@@ -1,0 +1,17 @@
+{
+  "name": "time-travel-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^2.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "precompile": "rm -rf ./dist",
+    "compile": "tsc src/index.ts --sourceMap --outFile ./dist/index.js",
+    "record": "mkdir -p dist/logs && ~/Downloads/node-chakra/bin/node --record src/debugger.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
