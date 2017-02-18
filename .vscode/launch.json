@@ -5,15 +5,29 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node2",
+            "type": "node",
             "request": "launch",
             "name": "Debug regular node",
             "program": "${workspaceRoot}/src/debugger.js",
             "cwd": "${workspaceRoot}",
             "sourceMaps": true,
             "outFiles": [
-                "dist/*.js"
-            ]
+                "${workspaceRoot}/dist/*.js"
+            ],
+            "trace": "sm"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Chakra Debug",
+            "program": "${workspaceRoot}/src/debugger.js",
+            "cwd": "${workspaceRoot}",
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/dist/*.js"
+            ],
+            "runtimeExecutable": "/Users/axemclion/Downloads/node-chakra/bin/node",
+            "trace": "sm"
         },
         {
             "type": "node",
@@ -23,13 +37,14 @@
             "cwd": "${workspaceRoot}",
             "sourceMaps": true,
             "outFiles": [
-                "dist/*.js"
+                "${workspaceRoot}/dist/*.js"
             ],
             "runtimeArgs": [
                 "--replay-debug=dist/logs",
                 "--break-first"
             ],
-            "runtimeExecutable": "/Users/axemclion/Downloads/node-chakra/bin/node"
+            "runtimeExecutable": "/Users/axemclion/Downloads/node-chakra/bin/node",
+            "trace": "sm"
         }
     ]
 }
